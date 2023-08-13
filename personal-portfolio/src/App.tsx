@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Terrence Nolan</h1>
-      </header>
+      <Header />
       <main className="app-main">
         <p>This is the body of the app</p>
       </main>
