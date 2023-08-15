@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 
-const Art = (): JSX.Element => {
+const ArtPage = (): JSX.Element => {
     return (
         <main className="main">
             Coming Soon!
@@ -9,4 +9,4 @@ const Art = (): JSX.Element => {
     );
 }
 
-export default Art;
+export default ArtPage;

@@ -2,7 +2,11 @@ import React, { useRef } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
-const Header = (): JSX.Element => {
+interface HeaderProps {
+    pageTitle: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ pageTitle }): JSX.Element => {
     const sidebar = useRef<HTMLDivElement>(null);
 
     const openNav = () => {
@@ -41,9 +45,7 @@ const Header = (): JSX.Element => {
                 </div>
             </div>
             <div className="flex-spacer"></div>
-            <Link to="/" className="header-title">
-                <h1>Terrence Nolan</h1>
-            </Link>
+            <h1 className="header-title">{pageTitle}</h1>
         </header>
     );
 }

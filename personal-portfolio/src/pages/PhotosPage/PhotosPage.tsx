@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 
-const Photos = (): JSX.Element => {
+const PhotosPage = (): JSX.Element => {
     return (
         <main className="main">
             Coming Soon!
@@ -9,4 +9,4 @@ const Photos = (): JSX.Element => {
     );
 }
 
-export default Photos;
+export default PhotosPage;
