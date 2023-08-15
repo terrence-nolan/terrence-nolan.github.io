@@ -1,0 +1,100 @@
+.app-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #CD6155;
+    color: #E5E8E8;
+}
+
+.flex-spacer {
+    flex: 1;
+}
+
+.header-title {
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: #E5E8E8;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+        color: white;
+    }
+}
+
+.bi-list {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-btn:hover .bi-list {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #34495E;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #E5E8E8;
+    display: block;
+    transition: 0.3s;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    padding: none;
+    top: 0.5rem;
+    left: 0.4rem;
+    color: #E5E8E8;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+        color: white;
+    }
+}
+
+.bi-x {
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-btn:hover .bi-x {
+    transform: scale(1.1);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.sidebar a:hover {
+    color: white;
+    transform: scale(1.1);
+}
