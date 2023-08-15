@@ -6,9 +6,9 @@ import { LayoutRouteProps } from 'react-router-dom';
 
 const Layout: React.FC<LayoutRouteProps> = ({ children }) => {
     return (
-        <div className="layout">
+        <div>
             <Header />
-            <main className="content">{children}</main>
+            <main>{children}</main>
             <Footer />
         </div>
     );

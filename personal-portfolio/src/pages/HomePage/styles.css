@@ -1,6 +1,10 @@
 .main {
-  text-align: center;
+  padding: 2rem;
   background-color: #FEF5E7;
   font-size: calc(10px + 2vmin);
   min-height: 100vh;
+}
+
+p {
+  text-align: justify;
 }

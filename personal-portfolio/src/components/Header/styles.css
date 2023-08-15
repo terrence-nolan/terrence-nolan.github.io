@@ -18,6 +18,8 @@
 .header-title {
     text-align: center;
     margin-right: 0.5rem;
+    text-decoration: none;
+    color: #E5E8E8;
 }
 
 .hamburger-btn {
@@ -63,7 +65,7 @@
 }
 
 .page-link:hover {
-    color: white;
+    color: #55C1CD;
     transform: scale(1.1);
 }
 

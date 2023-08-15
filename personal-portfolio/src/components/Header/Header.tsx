@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
                 </svg>
             </button>
             <div ref={sidebar} className="sidebar">
-                <ul className="nav-list">
+                <div className="nav-list">
 
                     <button onClick={closeNav} className="close-btn" aria-label="close-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="2.75rem" height="2.75rem" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
@@ -38,10 +38,12 @@ const Header = (): JSX.Element => {
                     <Link to="/projects" onClick={closeNav} className="page-link">Projects</Link>
                     <Link to="/photos" onClick={closeNav} className="page-link">Photos</Link>
                     <Link to="/art" onClick={closeNav} className="page-link">Art</Link>
-                </ul>
+                </div>
             </div>
             <div className="flex-spacer"></div>
-            <h1 className="header-title">Terrence Nolan</h1>
+            <Link to="/" className="header-title">
+                <h1>Terrence Nolan</h1>
+            </Link>
         </header>
     );
 }
