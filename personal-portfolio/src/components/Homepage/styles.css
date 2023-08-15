@@ -1,0 +1,10 @@
+.app {
+  text-align: center;
+  background-color: #FEF5E7;
+}
+
+.app-main {
+  margin-top: 7rem;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
