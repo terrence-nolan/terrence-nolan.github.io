@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Homepage from './components/Homepage/Homepage';
-import About from './components/About/About';
+import Homepage from './pages/HomePage/HomePage';
+import About from './pages/AboutPage/AboutPage';
+import Layout from './components/Layout/Layout';
 
 const AppRoutes: React.FC = () => {
     return (
         <Router>
-            <Routes>
-                <Route path="/home" element={<Homepage />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/about" element={<About />} />
+                </Routes>
+            </Layout>
         </Router>
     );
 };

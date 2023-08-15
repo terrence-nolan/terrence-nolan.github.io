@@ -26,18 +26,18 @@ const Header = (): JSX.Element => {
             </button>
             <div ref={sidebar} className="sidebar">
                 <ul className="nav-list">
-                    
+
                     <button onClick={closeNav} className="close-btn" aria-label="close-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="2.75rem" height="2.75rem" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                         </svg>
                     </button>
-                    <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/about">About Me</Link></li>
-                    <li><Link to="/experience">Experience</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
-                    <li><Link to="/photos">Photos</Link></li>
-                    <li><a href="/art">Art</a></li>
+                    <Link to="/" onClick={closeNav} className="page-link">Home</Link>
+                    <Link to="/about" onClick={closeNav} className="page-link">About Me</Link>
+                    <Link to="/experience" onClick={closeNav} className="page-link">Experience</Link>
+                    <Link to="/projects" onClick={closeNav} className="page-link">Projects</Link>
+                    <Link to="/photos" onClick={closeNav} className="page-link">Photos</Link>
+                    <Link to="/art" onClick={closeNav} className="page-link">Art</Link>
                 </ul>
             </div>
             <div className="flex-spacer"></div>

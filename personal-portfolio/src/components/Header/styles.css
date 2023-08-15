@@ -32,7 +32,7 @@
 }
 
 .bi-list {
-    transition: transform 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hamburger-btn:hover .bi-list {
@@ -52,32 +52,37 @@
     transition: 0.5s;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 32px;
+.page-link {
+    text-align: left;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: none;
     font-size: 25px;
     color: #E5E8E8;
     display: block;
-    transition: 0.3s;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.page-link:hover {
+    color: white;
+    transform: scale(1.1);
 }
 
 .close-btn {
     background: none;
     border: none;
     position: absolute;
-    padding: none;
     top: 0.5rem;
     left: 0.4rem;
     color: #E5E8E8;
     transition: all 0.3s ease-in-out;
 
     :hover {
-        color: white;
+        color: #CD6155;
     }
 }
 
 .bi-x {
-    transition: transform 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .close-btn:hover .bi-x {
@@ -87,14 +92,4 @@
 .nav-list {
     display: flex;
     flex-direction: column;
-}
-
-.nav-list li {
-    list-style-type: none;
-    text-align: left;
-}
-
-.sidebar a:hover {
-    color: white;
-    transform: scale(1.1);
 }

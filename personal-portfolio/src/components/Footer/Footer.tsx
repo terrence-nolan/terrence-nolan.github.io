@@ -1,10 +1,11 @@
 import React from "react";
+import "./styles.css"
 
 const Footer = (): JSX.Element => {
     return (
-        <div className="app-footer">
+        <footer className="footer">
             <p>© {new Date().getFullYear()} Terrence Nolan</p>
-        </div>
+        </footer>
     );
 }
 
