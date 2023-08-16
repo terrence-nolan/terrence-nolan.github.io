@@ -3,7 +3,7 @@ import './styles.css';
 
 const AboutPage = (): JSX.Element => {
     return (
-        <main className="main">
+        <main className="aboutMain">
             Coming Soon!
         </main>
     );

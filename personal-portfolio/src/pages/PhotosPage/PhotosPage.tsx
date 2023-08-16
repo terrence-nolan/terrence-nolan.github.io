@@ -3,7 +3,7 @@ import './styles.css';
 
 const PhotosPage = (): JSX.Element => {
     return (
-        <main className="main">
+        <main className="photosMain">
             Coming Soon!
         </main>
     );

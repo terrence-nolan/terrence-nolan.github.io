@@ -3,7 +3,7 @@ import './styles.css';
 
 const ProjectsPage = (): JSX.Element => {
     return (
-        <main className="main">
+        <main className="projectsMain">
             Coming Soon!
         </main>
     );

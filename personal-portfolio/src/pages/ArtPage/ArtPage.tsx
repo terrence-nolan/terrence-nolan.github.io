@@ -3,7 +3,7 @@ import './styles.css';
 
 const ArtPage = (): JSX.Element => {
     return (
-        <main className="main">
+        <main className="artMain">
             Coming Soon!
         </main>
     );

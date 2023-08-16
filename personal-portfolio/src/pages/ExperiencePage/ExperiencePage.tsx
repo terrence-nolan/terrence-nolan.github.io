@@ -4,7 +4,7 @@ import images from '../../images/images';
 
 const ExperiencePage = (): JSX.Element => {
     return (
-        <main className="main">
+        <main className="expMain">
             <div className="cardsDiv">
                 <div className="card">
                     <div className="cardTop">
