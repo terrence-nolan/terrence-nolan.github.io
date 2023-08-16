@@ -1,7 +1,72 @@
 .main {
-    padding: 2rem;
-    text-align: center;
-    background-color: #FEF5E7;
+    background-color: #DED6CA;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-direction: column;
     font-size: calc(10px + 2vmin);
     min-height: 100vh;
+}
+
+.cardsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+.card {
+    display: flex;
+    flex: 1;
+    text-align: left;
+    background-color: #FEF5E7;
+    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    overflow: auto;
+    min-width: 20em;
+    color: #2E4053;
+    font-size: 0.85em;
+}
+
+.cardTop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.leftText {
+    @media only screen and (min-width: 770px) {
+        text-align: left;
+    }
+}
+
+.rightText {
+    text-align: left;
+    @media only screen and (min-width: 770px) {
+        text-align: right;
+    }
+}
+
+.flexSpacer {
+    flex: 1;
+    min-width: 3em;
+}
+
+.list {
+    font-size: max(0.75em, 14px);
+    padding-left: 1.2em;
+}
+
+.image {
+    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin: 1rem;
+    align-self: center;
+    flex: 0 0 auto;
+    /* Don't grow, don't shrink, use content's intrinsic size */
+    max-height: 16em;
+    min-width: 12em;
 }

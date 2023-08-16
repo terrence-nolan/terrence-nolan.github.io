@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }): JSX.Element => {
                     <Link to="/art" onClick={closeNav} className="page-link">Art</Link>
                 </div>
             </div>
-            <div className="flex-spacer"></div>
+            <div className="flex-spacer" />
             <h1 className="header-title">{pageTitle}</h1>
         </header>
     );

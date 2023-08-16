@@ -42,6 +42,8 @@
 }
 
 .sidebar {
+    display: flex;
+    flex-wrap: none;
     height: 100%;
     width: 0;
     position: fixed;
@@ -49,6 +51,7 @@
     top: 0;
     left: 0;
     background-color: #34495E;
+    box-shadow: 0.4rem 0 .75rem rgba(0, 0, 0, 0.2);
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
