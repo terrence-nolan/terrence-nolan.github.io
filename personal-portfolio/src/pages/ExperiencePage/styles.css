@@ -1,12 +1,16 @@
 .expMain {
-    background-color: #DED6CA;
-    padding: 2rem 5rem;
     display: flex;
-    justify-content: center;
-    overflow-x: hidden;
     flex-direction: column;
+    justify-content: center;
+    background-color: #DED6CA;
+    padding: 1em 0;
+    overflow-x: hidden;
     font-size: calc(10px + 2vmin);
     min-height: 100vh;
+
+    @media only screen and (min-width: 1000px) {
+        padding: 1em 5em;
+    }
 }
 
 .cardsDiv {
@@ -33,26 +37,34 @@
 
 .cardTop {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
 }
 
 .leftText {
-    @media only screen and (min-width: 770px) {
+    @media only screen and (min-width: 768px) {
         text-align: left;
     }
 }
 
 .rightText {
     text-align: left;
-    @media only screen and (min-width: 770px) {
+
+    @media only screen and (min-width: 768px) {
         text-align: right;
     }
 }
 
 .flexSpacer {
-    flex: 1;
-    min-width: 3em;
+    @media only screen and (min-width: 768px) {
+        flex: 1;
+        min-width: 2em;
+    }
 }
 
 .list {

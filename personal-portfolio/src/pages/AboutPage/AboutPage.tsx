@@ -4,7 +4,7 @@ import './styles.css';
 const AboutPage = (): JSX.Element => {
     return (
         <main className="aboutMain">
-            Coming Soon!
+            <h1>Coming Soon!</h1>
         </main>
     );
 }

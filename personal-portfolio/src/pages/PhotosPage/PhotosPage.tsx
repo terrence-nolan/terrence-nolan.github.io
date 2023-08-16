@@ -4,7 +4,7 @@ import './styles.css';
 const PhotosPage = (): JSX.Element => {
     return (
         <main className="photosMain">
-            Coming Soon!
+            <h1>Coming Soon!</h1>
         </main>
     );
 }
