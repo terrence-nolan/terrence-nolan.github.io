@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
@@ -7,19 +7,40 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ pageTitle }): JSX.Element => {
-    const sidebar = useRef<HTMLDivElement>(null);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const sidebarRef = useRef<HTMLDivElement>(null);
 
     const openNav = () => {
-        if (sidebar.current) {
-            sidebar.current.style.width = "20rem";
+        if (sidebarRef.current) {
+            sidebarRef.current.style.width = "20rem";
+            setIsSidebarOpen(true);
         }
     };
 
     const closeNav = () => {
-        if (sidebar.current) {
-            sidebar.current.style.width = "0";
+        if (sidebarRef.current) {
+            sidebarRef.current.style.width = "0";
+            setIsSidebarOpen(false);
         }
     };
+
+    const closeOffClick = (event: MouseEvent) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+            closeNav();
+        }
+    }
+
+    useEffect(() => {
+        if (isSidebarOpen) {
+            document.addEventListener('mousedown', closeNav);
+        } else {
+            document.removeEventListener('mousedown', closeNav);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', closeNav);
+        };
+    }, [isSidebarOpen]);
 
     return (
         <header className="app-header">
@@ -28,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }): JSX.Element => {
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                 </svg>
             </button>
-            <div ref={sidebar} className="sidebar">
+            <div ref={sidebarRef} className="sidebar">
                 <div className="nav-list">
 
                     <button onClick={closeNav} className="close-btn" aria-label="close-menu">
