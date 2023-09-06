@@ -24,21 +24,22 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }): JSX.Element => {
         }
     };
 
-    const closeOffClick = (event: MouseEvent) => {
-        if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
-            closeNav();
-        }
-    }
 
     useEffect(() => {
+        const closeOffClick = (event: MouseEvent) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+                closeNav();
+            }
+        }
+
         if (isSidebarOpen) {
-            document.addEventListener('mousedown', closeNav);
+            document.addEventListener('mousedown', closeOffClick);
         } else {
-            document.removeEventListener('mousedown', closeNav);
+            document.removeEventListener('mousedown', closeOffClick);
         }
 
         return () => {
-            document.removeEventListener('mousedown', closeNav);
+            document.removeEventListener('mousedown', closeOffClick);
         };
     }, [isSidebarOpen]);
 
