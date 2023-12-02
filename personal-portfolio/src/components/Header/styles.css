@@ -20,6 +20,7 @@
     margin-right: 0.5rem;
     text-decoration: none;
     color: #E5E8E8;
+    font-weight: bold;
 }
 
 .bars-btn {
@@ -59,6 +60,7 @@
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: none;
     font-size: 25px;
+    font-weight: bold;
     color: #E5E8E8;
     display: block;
     transition: color 0.3s, transform 0.3s;
